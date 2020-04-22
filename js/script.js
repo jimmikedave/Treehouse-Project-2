@@ -20,10 +20,6 @@ FSJS project 2 - List Filter and Pagination
 const studentList = document.querySelectorAll('.student-item');
 const pageLimit = 10;
 
-
-
-
-
 /***
    Create the `showPage` function to hide all of the items in the
    list except for the ten you want to show.
@@ -43,9 +39,9 @@ const showPage = (list, page) => {
   const endIndex = (page * pageLimit);
   for (i = 0; i < list.length; i +=1) {
     if (startIndex <= list[i] && list[i] < endIndex){
-      student.style.display = '';
+      studentList[i].style.display = '';
     } else {
-      student.style.display = none;
+      studentList[i].style.display = 'none';
     }
   };
 }
